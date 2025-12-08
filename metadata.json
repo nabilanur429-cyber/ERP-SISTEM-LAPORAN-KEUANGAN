@@ -1,0 +1,5 @@
+{
+  "name": "LuxERP Architect",
+  "description": "A dual-mode application: An AI-powered architectural assistant to generate Django ERP code based on specific prompts, and a 'Luxurious UI' preview of the resulting Trading ERP system.",
+  "requestFramePermissions": []
+}
