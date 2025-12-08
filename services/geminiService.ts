@@ -4,7 +4,8 @@ let genAI: GoogleGenAI | null = null;
 
 const getGenAI = (): GoogleGenAI => {
   if (!genAI) {
-    const apiKey = process.env.API_KEY || '';
+    // Check for Netlify injected variable first, then standard process.env
+    const apiKey = (window as any).ENV?.API_KEY || process.env.API_KEY || '';
     if (!apiKey) {
         console.error("API_KEY is missing from environment variables");
         throw new Error("API Key missing");
